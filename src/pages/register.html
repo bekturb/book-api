@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+</head>
+<body>
+
+<section class="register">
+    <div class="container">
+        <div class="form-list">
+            <h1 class="register__title">Регистрация</h1>
+            <br>
+            <form id="register--form" class="registerForm" action="">
+                <div class="registerForm__inputs">
+                    <input type="text"
+                           id="login"
+                           class="registerForm__input input"
+                           placeholder="Логин"
+                           name="username"
+                    >
+                    <span class="registerForm__warning">это имя пользователя уже существует</span>
+                    <span class="registerForm__error-message">логин должен быть на латинице, от 3 до 21 символов</span>
+                </div>
+                <div class="registerForm__inputs">
+                    <input type="password"
+                           id="password"
+                           class="registerForm__password input"
+                           placeholder="Пароль"
+                           name="password"
+                    >
+                    <span class="registerForm__error-message">пароль должен быть на латинице, от 3 до 21 символов</span>
+                </div>
+                <div class="registerForm__inputs">
+                    <input type="password"
+                           id="repeat-password"
+                           class="registerForm__password checkInput"
+                           placeholder="Повторите пароль"
+                           name="repeatPassword"
+                    >
+                    <span class="registerForm__error-message">пароли не совпадают</span>
+                </div>
+                <div class="registerForm__inputs">
+                    <input type="text"
+                           id="username"
+                           class="registerForm__username input"
+                           placeholder="Имя пользователя"
+                           name="firstName"
+                    >
+                    <span class="registerForm__error-message">имя должна быть на латинице, от 3 до 21 символов</span>
+                </div>
+                <div class="registerForm__inputs">
+                    <input type="number"
+                           id="age"
+                           class="registerForm__age input"
+                           placeholder="Возраст"
+                           name="age"
+                    >
+                    <span class="registerForm__error-message">возраст должен быть указан</span>
+                </div>
+                <br>
+                <button class="registerForm__button" type="submit">Зарегистрироваться</button>
+            </form>
+            <a class="auth--link" href="index.html">У меня есть учетная запись.</a>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

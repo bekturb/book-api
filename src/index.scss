@@ -1,0 +1,56 @@
+@import "style/mixin";
+@import "style/all.min.css";
+@import "style/validate";
+@import "style/register";
+@import "style/books";
+@import "style/detail";
+@import "style/createBook";
+@import "style/update";
+@import "style/media";
+
+
+
+html {
+  height: 100%;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,li,ol{
+  list-style: none;
+}
+
+
+
+a, a:hover{
+  text-decoration: none;
+}
+
+body {
+  font-family: sans-serif;
+  background: linear-gradient(#141e30, #243b55) no-repeat;
+}
+
+.container{
+  width: 1140px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.row{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.col-3{
+  width: 33.333333%;
+}
+
+
+@import "style/media";

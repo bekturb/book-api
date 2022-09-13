@@ -1,0 +1,70 @@
+
+
+.books--detail{
+  display: none;
+  &__wrapper{
+    position: relative;
+    margin: 150px auto;
+    width: 750px;
+    height: 450px;
+    background: rgba(0, 0, 0, .5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+  }
+  .detail--card{
+    &__title{
+      width: 400px;
+      padding-top: 62px;
+      margin-left: 30px;
+      color: #fff;
+      font-weight: 400;
+      font-size: 25px;
+      font-family: sans-serif;
+    }
+    &__author{
+      padding-top: 32px;
+      margin-left: 30px;
+      color: #fff;
+      font-weight: 400;
+      font-size: 20px;
+      font-family: sans-serif;
+    }
+  }
+  .books--inner{
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 30px 30px;
+    &__list{
+    }
+    &__publishHouse,
+    &__publishYear,
+    &__genres,
+    &__originalLanguage,
+    &__pagesNumber {
+      margin: 10px 0;
+      color: #fff;
+      font-weight: 400;
+      font-size: 15px;
+      font-family: sans-serif;
+    }
+  }
+  &__button{
+    @include btn;
+    margin-left: 30px;
+  }
+
+  .fa-xmark{
+    cursor: pointer;
+    position: absolute;
+    color: white;
+    font-size: 27px;
+    top: 31px;
+    right: 30px;
+  }
+}
+
+.visible{
+  display: block;
+}

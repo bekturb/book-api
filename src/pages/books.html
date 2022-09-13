@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<section class="books">
+    <div class="container">
+        <div class="books__corner">
+            <button class="books__button--add button">Добавить книгу</button>
+            <p class="books__user"></p>
+            <button class="books__button--logout button">выход</button>
+        </div>
+        <div class="warning-message">
+            <p class="warning-message__title"> Недоступно для вас <br> Чтобы увидеть книги
+                <a class="link-message" href="/index.html">войдите</a>в систему или
+                <a class="link-message" href="/register.html"> зарегистрируйтесь </a>
+            </p>
+            <p class="empty-message">Пока книг нету</p>
+        </div>
+        <div class="books__items">
+            <h1 class="books__title">Книги</h1>
+            <div id="wrapper" class="row">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="books--detail">
+    <div class="container">
+        <div class="books--detail__wrapper" >
+            <div class="detail--card">
+
+            </div>
+            <button class="books--detail__button button">Редактировать</button>
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+    </div>
+</section>
+
+
+<section class="create--book ">
+    <div class="container">
+        <div class="create--book__wrapper">
+            <h1 class="create--book__title">Добавить книгу</h1>
+            <br>
+            <form id="create--form" class="create--form" action="">
+                <div class="create--form__inputs">
+                    <input type="text"
+                           id="name"
+                           class="create--form__input input"
+                           placeholder="Название"
+                           name="name"
+                    >
+<!--                    <span class="create&#45;&#45;form__warning">это имя пользователя уже существует</span>-->
+                    <span class="create--form__error-message">* Объязательное поле</span>
+                </div>
+                <div class="create--form__inputs">
+                    <input type="text"
+                           id="author"
+                           class="create--form__author input"
+                           placeholder="Автор"
+                           name="author"
+                    >
+                    <span class="create--form__error-message">* Объязательное поле</span>
+                </div>
+                <div class="create--form__inputs">
+                    <input type="number"
+                           id="publish--year"
+                           class="create--form__year input"
+                           placeholder="Год издания"
+                           name="publishYear"
+                    >
+                    <span class="create--form__error-message">* Объязательное поле</span>
+                </div>
+                <div class="create--form__inputs">
+                    <input type="text"
+                           id="publish--house"
+                           class="create--form__house input"
+                           placeholder="Издательство"
+                           name="publishHouse"
+                    >
+                    <span class="create--form__error-message">* Объязательное поле</span>
+                </div>
+                <div class="create--form__inputs">
+                    <input type="text"
+                           id="original-language"
+                           class="create--form__language input"
+                           placeholder="Язык оригинала"
+                           name="originalLanguage"
+                    >
+                    <span class="create--form__error-message">* Объязательное поле</span>
+                </div>
+                <div class="create--form__inputs">
+                    <input type="text"
+                           id="genres"
+                           class="create--form__genres input"
+                           placeholder="Жанр"
+                           name="genres"
+                    >
+                    <span class="create--form__error-message">* Объязательное поле</span>
+                </div>
+                <div class="create--form__inputs">
+                    <input type="text"
+                           id="page"
+                           class="create--form__page input"
+                           placeholder="Количество страниц"
+                           name="pagesNumber"
+                    >
+                    <span class="create--form__error-message">* Объязательное поле</span>
+                </div>
+                <h2 class="create--form__favorite--title">Избранное</h2>
+                <div class="create--form__favorite--form">
+                    <label for="yes">Да </label>
+                    <input type="radio"
+                           id="yes"
+                           class="create--form__page isFavoriteInput"
+                           name="isFavorite"
+                           value="1"
+                    >
+                    <span class="create--form__error-message error">* Объязательное поле</span>
+                    <label for="no">Нет </label>
+                    <input type="radio"
+                           id="no"
+                           class="create--form__page isFavoriteInput"
+                           name="isFavorite"
+                           value="0"
+                           checked
+                    >
+                    <span class="create--form__error-message error">* Объязательное поле</span>
+                </div>
+                <br>
+                <button class="create--form__button" type="submit">Добавить</button>
+            </form>
+            <i class="fa-solid fa-xmark close-mark"></i>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="update--book">
+    <div class="container">
+        <div class="update--book__wrapper">
+            <h1 class="update--book__title">Редактировать книгу</h1>
+            <br>
+            <form id="update--form" class="update--form" action="">
+                <div class="update--form__inputs">
+                    <input type="text"
+                           id="bookName"
+                           class="update--form__input field"
+                           placeholder="Название"
+                           name="name"
+                    >
+                    <!--                    <span class="create&#45;&#45;form__warning">это имя пользователя уже существует</span>-->
+                    <span class="update--form__error-message">* Объязательное поле</span>
+                </div>
+                <div class="update--form__inputs">
+                    <input type="text"
+                           id="bookAuthor"
+                           class="update--form__author field"
+                           placeholder="Автор"
+                           name="author"
+                    >
+                    <span class="update--form__error-message">* Объязательное поле</span>
+                </div>
+                <div class="update--form__inputs">
+                    <input type="number"
+                           id="book-publish--year"
+                           class="update--form__year field"
+                           placeholder="Год издания"
+                           name="publishYear"
+                    >
+                    <span class="update--form__error-message">* Объязательное поле</span>
+                </div>
+                <div class="update--form__inputs">
+                    <input type="text"
+                           id="book-publish--house"
+                           class="update--form__house field"
+                           placeholder="Издательство"
+                           name="publishHouse"
+                    >
+                    <span class="update--form__error-message">* Объязательное поле</span>
+                </div>
+                <div class="update--form__inputs">
+                    <input type="text"
+                           id="book-original-language"
+                           class="update--form__language field"
+                           placeholder="Язык оригинала"
+                           name="originalLanguage"
+                    >
+                    <span class="update--form__error-message">* Объязательное поле</span>
+                </div>
+                <div class="update--form__inputs">
+                    <input type="text"
+                           id="book-genres"
+                           class="update--form__genres field"
+                           placeholder="Жанр"
+                           name="genres"
+                    >
+                    <span class="update--form__error-message">* Объязательное поле</span>
+                </div>
+                <div class="update--form__inputs">
+                    <input type="text"
+                           id="book-page"
+                           class="update--form__page field"
+                           placeholder="Количество страниц"
+                           name="pagesNumber"
+                    >
+                    <span class="update--form__error-message">* Объязательное поле</span>
+                </div>
+                <h2 class="update--form__favorite--title">Избранное</h2>
+                <div class="update--form__favorite--form">
+                    <label for="book-yes">Да </label>
+                    <input type="radio"
+                           id="book-yes"
+                           class="update--form__page field"
+                           name="isFavorite"
+                    >
+                    <span class="update--form__error-message error">* Объязательное поле</span>
+                    <label for="book-no">Нет </label>
+                    <input type="radio"
+                           id="book-no"
+                           class="update--form__page field"
+                           name="isFavorite"
+                    >
+                    <span class="update--form__error-message error">* Объязательное поле</span>
+                </div>
+                <br>
+                <button class="update--form__button" type="submit">Cохранить</button>
+            </form>
+            <i class="fa-solid fa-xmark update-close"></i>
+        </div>
+    </div>
+</section>
+
+<!--"id": "74hg47wjuGG",-->
+<!--"name": "Война и мир",-->
+<!--"author": "Лев Толстой",-->
+<!--"isFavorite": false,-->
+<!--"publishYear": 1865,-->
+<!--"publishHouse": "Эксмо",-->
+<!--"pagesNumber": 1300,-->
+<!--"genres": [-->
+<!--"Исторический роман",-->
+<!--"Роман"-->
+<!--],-->
+<!--"originalLanguage": "Русский"-->
+
+</body>
+</html>

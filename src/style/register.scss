@@ -1,0 +1,58 @@
+
+.register{
+  .form-list{
+    @include form-list;
+  }
+  .registerForm{
+    &__button{
+      @include btn;
+      margin: 20px 0;
+    }
+    &__error-message {
+      visibility: hidden;
+      color: #dc3545;
+    }
+    &__error-repeated{
+      visibility: hidden;
+      color: #dc3545;
+    }
+    .error-repeated{
+      visibility: visible;
+    }
+    .error--send{
+      visibility: visible;
+    }
+    &__warning {
+      visibility: hidden;
+      margin: 20px 0;
+      color: #dc3545;
+    }
+    .warning{
+      visibility: visible;
+    }
+    &__warning{
+      visibility: hidden;
+    }
+  }
+  &__title{
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+  .input,
+  .checkInput{
+    @include input;
+    padding: 5px 0;
+  }
+
+  .input-error{
+    border-bottom: 1px solid #dc3545;
+  }
+
+  .auth--link {
+    color: white;
+    text-decoration: underline;
+
+  }
+}

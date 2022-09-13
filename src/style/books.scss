@@ -1,0 +1,129 @@
+
+
+.books{
+  font-family: sans-serif;
+  background: linear-gradient(#141e30, #243b55) no-repeat;
+
+  &__info{
+    cursor: pointer;
+  }
+
+  &__corner{
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .button{
+    @include btn;
+    margin: 0 40px;
+  }
+  &__user{
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    font-size: 25px;
+    text-transform: uppercase;
+  }
+
+  &__items{
+    margin: 30px 0;
+  }
+
+  &__title{
+    color: #fff;
+    font-weight: 400;
+    font-size: 25px;
+    text-transform: uppercase;
+  }
+
+  &__card{
+    display: flex;
+    margin: 30px 10px;
+    justify-content: space-around;
+    width: 350px;
+    height: 200px;
+    background: rgba(0, 0, 0, .5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+  }
+  &__book-name{
+    padding-top: 42px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 23px;
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+  &__book-author{
+    padding-top: 71px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 15px;
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+  .empty-message{
+    padding-top: 71px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 25px;
+    font-family: sans-serif;
+    text-align: center;
+    display: none;
+  }
+
+  .warning-message{
+    &__title{
+      padding-top: 71px;
+      color: #fff;
+      font-weight: 400;
+      font-size: 24px;
+      font-family: sans-serif;
+      text-align: center;
+      display: none;
+    }
+  }
+
+  &__func{
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  .fa-trash{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer ;
+    padding:5px;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
+    box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+    color: white;
+  }
+
+  .fa-heart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding:5px;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
+    box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+    color: white;
+  }
+
+  &__visible{
+    visibility: hidden;
+  }
+}
+
+.books--visible{
+  display: none;
+}

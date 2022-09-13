@@ -1,0 +1,59 @@
+
+.authentication {
+  .form-list {
+    @include form-list;
+
+    .loginForm {
+      &__button {
+        @include btn;
+        margin-top: 20px
+      }
+      &__error-message {
+        visibility: hidden;
+        color: #dc3545;
+      }
+      .error-message{
+        visibility: visible;
+      }
+      &__warning {
+        visibility: hidden;
+        margin: 20px 0;
+        color: #dc3545;
+      }
+      .warning{
+        visibility: visible;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+
+
+  .input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+
+  .input-error{
+    border-bottom: 1px solid #dc3545;
+  }
+
+
+  .register--link {
+    color: white;
+    text-decoration: underline;
+
+  }
+}

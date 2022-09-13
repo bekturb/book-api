@@ -1,0 +1,80 @@
+
+
+.update--book{
+  display: none;
+  &__wrapper{
+    @include form-list;
+    width: 514px;
+    height: 680px;
+  }
+  &__title{
+    margin: 0 0 3px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+  .update--form {
+    &__button {
+      @include btn;
+      padding: 10px 76px;
+      margin-left: 100px;
+    }
+    &__error-message {
+      visibility: hidden;
+      font-size: 13px;
+      color: #dc3545;
+    }
+
+    .error-message{
+      visibility: visible;
+    }
+    &__warning {
+      //margin: 20px 0;
+      font-size: 13px;
+      color: #dc3545;
+    }
+    &__favorite--title{
+      margin-top: 20px;
+      color: #fff;
+      text-align: center;
+    }
+    &__favorite--form{
+      width: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+
+      label{
+        color: white;
+        padding: 20px 5px 20px 15px;
+
+      }
+    }
+  }
+
+  .field{
+    @include input;
+    padding: 5px 0;
+  }
+
+  .input-error{
+    border-bottom: 1px solid #dc3545;
+  }
+  .fa-xmark {
+    position: absolute;
+    top: 17px;
+    right: 24px;
+    color: white;
+    font-size: 25px;
+  }
+
+  .error{
+    display: none;
+  }
+
+}
+
+.update-visible{
+  display: block;
+}
